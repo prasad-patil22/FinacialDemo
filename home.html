@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>💰 Personal Finance Tracker</h1>
+        </header>
+
+        <!-- Income and Expense Form -->
+        <div class="form-section">
+            <h2>Add Income/Expense</h2>
+            <form id="transaction-form">
+                <input type="text" id="description" placeholder="Enter Description" required><br>
+                <input type="number" id="amount" placeholder="Enter Amount" required><br>
+                <select id="category"><br>
+                    <option value="income">Income</option>
+                    <option value="food">Food</option>
+                    <option value="rent">Rent</option>
+                    <option value="entertainment">Entertainment</option>
+                    <option value="other">Other</option>
+                </select><br>
+                <!-- Green full-width transaction button -->
+                <button type="submit" class="btn primary-btn">Add Transaction</button><br>
+            </form>
+        </div>
+
+        <!-- Control Buttons -->
+        <div class="control-section">
+            <button onclick="navigateTo('transactions.html')" class="btn secondary">Show Transactions</button><br>
+            <button onclick="navigateTo('graph.html')" class="btn secondary">Show Line Graph</button><br>
+        </div>
+
+        <!-- Expense Summary -->
+        <div class="summary-section">
+            <h2>Summary</h2>
+            <div class="summary-box">
+                <p>Total Income: <span id="total-income">₹0</span></p><br>
+                <p>Total Expenses: <span id="total-expenses">₹0</span></p><br>
+                <p>Balance: <span id="balance">₹0</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
